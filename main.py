@@ -16,7 +16,8 @@ for i in range (4):
     groupOne[i][3] = input("Who is their third choice? ")
     groupOne[i][4] = input("Who is their fourth choice? ")
 for i in range (4):
-    groupTwo[i][1] = input("Who does group", groupTwo[i][0], "prefer out of:", groupOne[0][0], groupOne[1][0], groupOne[2][0], groupOne[3][0] + "? ")
+    print("Who does group", groupTwo[i][0], "prefer out of:", groupOne[0][0], groupOne[1][0], groupOne[2][0], groupOne[3][0] + "? ")
+    groupTwo[i][1] = input()
     groupTwo[i][2] = input("Who is their second choice? ")
     groupTwo[i][3] = input("Who is their third choice? ")
     groupTwo[i][4] = input("Who is their fourth choice? ")
