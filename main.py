@@ -9,6 +9,8 @@ print("Now input the names of 4 different people for your initial 4 people to ma
 for i in range (4):
     groupTwo[i][0] = input()
 print("Now its time to input preferences!")
+print(groupOne)
+print(groupTwo)
 for i in range (4):
     groupOne[i][1] = input("Who does group", groupOne[i][0], "prefer out of:", groupTwo[0][0], groupTwo[1][0], groupTwo[2][0], groupTwo[3][0] + "? ")
     groupOne[i][2] = input("Who is their second choice? ")
