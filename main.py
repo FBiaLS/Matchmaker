@@ -23,9 +23,14 @@ for i in range (4):
 for i in range (4):
     print("Who does group", groupTwo[i][0], "prefer out of:", groupOne[0][0], groupOne[1][0], groupOne[2][0], groupOne[3][0] + "? ")
     groupTwo[i][1] = input()
+    tempPref = groupTwo[i][1]
+    tempName = i
     groupTwo[i][2] = input("Who is their second choice? ")
     groupTwo[i][3] = input("Who is their third choice? ")
     groupTwo[i][4] = input("Who is their fourth choice? ")
+    for i in range (4):
+        if groupOne[i][0] == tempPref.lower():
+            groupOne[i][tempName + 5] = "True"
 
 print(groupOne)
 print(groupTwo)
