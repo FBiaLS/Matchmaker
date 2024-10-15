@@ -62,7 +62,7 @@ for i in range (4):
     groupTwo[i][0] = input()
 print("Now its time to input preferences!")
 for i in range (4):
-    print("Who does group", groupOne[i][0], "prefer out of:", groupTwo[0][0], groupTwo[1][0], groupTwo[2][0], groupTwo[3][0] + "? ")
+    print("Who does", groupOne[i][0], "prefer out of:", groupTwo[0][0], groupTwo[1][0], groupTwo[2][0], groupTwo[3][0] + "? ")
     groupOne[i][1] = input()
     tempPref = groupOne[i][1]
     tempName = i
@@ -73,7 +73,7 @@ for i in range (4):
         if groupTwo[i][0] == tempPref.lower():
             groupTwo[i][tempName + 5] = "True"
 for i in range (4):
-    print("Who does group", groupTwo[i][0], "prefer out of:", groupOne[0][0], groupOne[1][0], groupOne[2][0], groupOne[3][0] + "? ")
+    print("Who does", groupTwo[i][0], "prefer out of:", groupOne[0][0], groupOne[1][0], groupOne[2][0], groupOne[3][0] + "? ")
     groupTwo[i][1] = input()
     tempPref = groupTwo[i][1]
     tempName = i
