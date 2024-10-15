@@ -3,7 +3,7 @@ groupTwo = [["nameone", "perferenceone", "perferencetwo", "perferencethree", "pe
 
 print("Welcome to Online Matchmaker! Input the names of 4 people who you want to find a match! (these people will not match with each other)")
 
-def checkMatch1():
+def checkMatch1(groupTwo):
     count = False
     for i in range (4):
         if groupOne[0][i + 5] is True and count is True:
@@ -29,7 +29,7 @@ def checkMatch1():
         elif groupOne[3][i + 5] is True:
             count = True
 
-def checkMatch2():
+def checkMatch2(groupTwo):
     count = False
     for i in range (4):
         if groupTwo[0][i + 5] is True and count is True:
@@ -84,5 +84,5 @@ for i in range (4):
         if groupOne[i][0] == tempPref.lower():
             groupOne[i][tempName + 5] = "True"
 
-run = checkMatch2()
+run = checkMatch2(groupTwo)
 print(run)
