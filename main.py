@@ -33,27 +33,28 @@ def checkMatch2(groupTwo):
     count = False
     for i in range (4):
         if groupTwo[0][i + 5] is True and count is True:
-            return count
+            return True
         elif groupTwo[0][i + 5] is True:
             count = True
     count = False
     for i in range (4):
         if groupTwo[1][i + 5] is True and count is True:
-            return count
+            return True
         elif groupTwo[1][i + 5] is True:
             count = True
     count = False
     for i in range (4):
         if groupTwo[2][i + 5] is True and count is True:
-            return count
+            return True
         elif groupTwo[2][i + 5] is True:
             count = True
     count = False
     for i in range (4):
         if groupTwo[3][i + 5] is True and count is True:
-            return count
+            return True
         elif groupTwo[3][i + 5] is True:
             count = True
+    return False
 
 for i in range (4):
     groupOne[i][0] = input()
