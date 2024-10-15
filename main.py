@@ -3,6 +3,58 @@ groupTwo = [["nameone", "perferenceone", "perferencetwo", "perferencethree", "pe
 
 print("Welcome to Online Matchmaker! Input the names of 4 people who you want to find a match! (these people will not match with each other)")
 
+def checkMatch1():
+    count = False
+    for i in range (4):
+        if groupOne[0][i + 5] is True and count is True:
+            return count
+        elif groupOne[0][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupOne[1][i + 5] is True and count is True:
+            return count
+        elif groupOne[1][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupOne[2][i + 5] is True and count is True:
+            return count
+        elif groupOne[2][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupOne[3][i + 5] is True and count is True:
+            return count
+        elif groupOne[3][i + 5] is True:
+            count = True
+
+def checkMatch2():
+    count = False
+    for i in range (4):
+        if groupTwo[0][i + 5] is True and count is True:
+            return count
+        elif groupTwo[0][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupTwo[1][i + 5] is True and count is True:
+            return count
+        elif groupTwo[1][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupTwo[2][i + 5] is True and count is True:
+            return count
+        elif groupTwo[2][i + 5] is True:
+            count = True
+    count = False
+    for i in range (4):
+        if groupTwo[3][i + 5] is True and count is True:
+            return count
+        elif groupTwo[3][i + 5] is True:
+            count = True
+
 for i in range (4):
     groupOne[i][0] = input()
 print("Now input the names of 4 different people for your initial 4 people to match with!")
@@ -32,5 +84,5 @@ for i in range (4):
         if groupOne[i][0] == tempPref.lower():
             groupOne[i][tempName + 5] = "True"
 
-print(groupOne)
-print(groupTwo)
+run = checkMatch2()
+print(run)
