@@ -3,58 +3,31 @@ groupTwo = [["nameone", "perferenceone", "perferencetwo", "perferencethree", "pe
 
 print("Welcome to Online Matchmaker! Input the names of 4 people who you want to find a match! (these people will not match with each other)")
 
-def checkMatch1(groupOne):
+def checkMatch(group):
     count = False
     for i in range (4):
-        if groupOne[0][i + 5] is True and count is True:
+        if group[0][i + 5] is True and count is True:
             return count
-        elif groupOne[0][i + 5] is True:
+        elif group[0][i + 5] is True:
             count = True
     count = False
     for i in range (4):
-        if groupOne[1][i + 5] is True and count is True:
+        if group[1][i + 5] is True and count is True:
             return count
-        elif groupOne[1][i + 5] is True:
+        elif group[1][i + 5] is True:
             count = True
     count = False
     for i in range (4):
-        if groupOne[2][i + 5] is True and count is True:
+        if group[2][i + 5] is True and count is True:
             return count
-        elif groupOne[2][i + 5] is True:
+        elif group[2][i + 5] is True:
             count = True
     count = False
     for i in range (4):
-        if groupOne[3][i + 5] is True and count is True:
+        if group[3][i + 5] is True and count is True:
             return count
-        elif groupOne[3][i + 5] is True:
+        elif group[3][i + 5] is True:
             count = True
-
-def checkMatch2(groupTwo):
-    count = False
-    for i in range (4):
-        if groupTwo[0][i + 5] is True and count is True:
-            return True
-        elif groupTwo[0][i + 5] is True:
-            count = True
-    count = False
-    for i in range (4):
-        if groupTwo[1][i + 5] is True and count is True:
-            return True
-        elif groupTwo[1][i + 5] is True:
-            count = True
-    count = False
-    for i in range (4):
-        if groupTwo[2][i + 5] is True and count is True:
-            return True
-        elif groupTwo[2][i + 5] is True:
-            count = True
-    count = False
-    for i in range (4):
-        if groupTwo[3][i + 5] is True and count is True:
-            return True
-        elif groupTwo[3][i + 5] is True:
-            count = True
-    return False
 
 for i in range (4):
     groupOne[i][0] = input()
@@ -88,5 +61,7 @@ for i in range (4):
         if groupTwo[i][0] == tempPref.lower():
             groupTwo[i][tempName + 5] = True
 
-run = checkMatch2(groupTwo)
+run = checkMatch(groupTwo)
+print(run)
+run = checkMatch(groupOne)
 print(run)
