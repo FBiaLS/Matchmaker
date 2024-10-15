@@ -84,6 +84,9 @@ for i in range (4):
     for i in range (4):
         if groupOne[i][0] == tempPref.lower():
             groupOne[i][tempName + 5] = "True"
+    for i in range (4):
+        if groupTwo[i][0] == tempPref.lower():
+            groupTwo[i][tempName + 5] = "True"
 
 run = checkMatch2(groupTwo)
 print(run)
