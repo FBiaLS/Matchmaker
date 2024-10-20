@@ -62,6 +62,8 @@ for i in range (4):
         if groupTwo[i][0] == tempPref.lower():
             groupTwo[i][tempName + 5] = True
 
+checkOne = checkMatch(groupOne)
+
 if checkMatch(groupOne) is False:
     for i in range(4):
         if groupOne[0][i + 5] is True:
