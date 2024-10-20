@@ -63,7 +63,7 @@ for i in range (4):
             groupTwo[i][tempName + 5] = True
 
 checkOne = checkMatch(groupOne)
-print(checkOne)
+checkTwo = checkMatch(groupTwo)
 
 if checkOne is False:
     for i in range(4):
@@ -82,3 +82,20 @@ if checkOne is False:
     print(groupOne[1][0], "has been matched with", groupOne[1][1])
     print(groupOne[2][0], "has been matched with", groupOne[2][1])
     print(groupOne[3][0], "has been matched with", groupOne[3][1])
+if checkTwo is False:
+    for i in range(4):
+        if groupTwo[0][i + 5] is True:
+            groupTwo[0][1] = groupOne[i][0]
+    for i in range(4):
+        if groupTwo[1][i + 5] is True:
+            groupTwo[1][1] = groupOne[i][0]
+    for i in range(4):
+        if groupTwo[2][i + 5] is True:
+            groupTwo[2][1] = groupOne[i][0]
+    for i in range(4):
+        if groupTwo[3][i + 5] is True:
+            groupTwo[3][1] = groupOne[i][0]
+    print(groupTwo[0][0], "has been matched with", groupTwo[0][1])
+    print(groupTwo[1][0], "has been matched with", groupTwo[1][1])
+    print(groupTwo[2][0], "has been matched with", groupTwo[2][1])
+    print(groupTwo[3][0], "has been matched with", groupTwo[3][1])
