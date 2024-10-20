@@ -63,8 +63,9 @@ for i in range (4):
             groupTwo[i][tempName + 5] = True
 
 checkOne = checkMatch(groupOne)
+print(checkOne)
 
-if checkMatch(groupOne) is False:
+if checkOne is False:
     for i in range(4):
         if groupOne[0][i + 5] is True:
             groupOne[0][1] = groupTwo[i][0]
