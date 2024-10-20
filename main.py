@@ -61,7 +61,20 @@ for i in range (4):
         if groupTwo[i][0] == tempPref.lower():
             groupTwo[i][tempName + 5] = True
 
-run = checkMatch(groupTwo)
-print(run)
-run = checkMatch(groupOne)
-print(run)
+if checkMatch(groupOne) is False:
+    for i in range(4):
+        if groupOne[0][i + 5] is True:
+            groupOne[0][1] = groupTwo[i][0]
+    for i in range(4):
+        if groupOne[1][i + 5] is True:
+            groupOne[1][1] = groupTwo[i][0]
+    for i in range(4):
+        if groupOne[2][i + 5] is True:
+            groupOne[2][1] = groupTwo[i][0]
+    for i in range(4):
+        if groupOne[3][i + 5] is True:
+            groupOne[3][1] = groupTwo[i][0]
+    print(groupOne[0][0], "has been matched with", groupOne[0][1])
+    print(groupOne[1][0], "has been matched with", groupOne[1][1])
+    print(groupOne[2][0], "has been matched with", groupOne[2][1])
+    print(groupOne[3][0], "has been matched with", groupOne[3][1])
