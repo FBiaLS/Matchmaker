@@ -28,6 +28,7 @@ def checkMatch(group):
             return count
         elif group[3][i + 5] is True:
             count = True
+    return count
 
 for i in range (4):
     groupOne[i][0] = input()
