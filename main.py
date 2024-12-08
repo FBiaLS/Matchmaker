@@ -65,6 +65,41 @@ for i in range (4):
 checkOne = checkMatch(groupOne)
 checkTwo = checkMatch(groupTwo)
 
+while checkOne is True:
+    suitors = []
+    suitorsIndex = []
+    for i in range (4):
+        if groupOne[0][i + 5] is True:
+            suitors.append(i)
+            suitorsIndex.append(i)
+    #finds the index for every true suitor
+    for i in range (len(suitors)):
+        suitors[i] = groupTwo[suitors[i]][0]
+    #converts indexes to suitor names
+    target = -1
+    for i in range (len(suitors)):
+        if groupOne[0][1] == suitors[i]:
+            target  = suitorsIndex[i]
+    if target == -1:
+        for i in range (len(suitors)):
+            if groupOne[0][2] == suitors[i]:
+                target  = suitorsIndex[i]
+    if target == -1:
+        for i in range (len(suitors)):
+            if groupOne[0][3] == suitors[i]:
+                target  = suitorsIndex[i]
+    if target == -1:
+        for i in range (len(suitors)):
+            if groupOne[0][4] == suitors[i]:
+                target  = suitorsIndex[i]
+    #finds index of suitor that should be true
+    for i in range(4):
+        groupOne[0][i + 5] = False
+    groupOne[0][target + 5] = True
+    #converts all suitor values to false except the target suitor
+    #finds the names of unpicked suitors so they can set new preference as true
+    #checkmatch
+
 if checkOne is False:
     for i in range(4):
         if groupOne[0][i + 5] is True:
